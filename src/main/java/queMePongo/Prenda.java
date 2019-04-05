@@ -7,38 +7,39 @@ public class Prenda {
 	Tela tela;
 	String tipo;
 	Categoria categoria;
-	
-	public ColorRopa getColorPrimario() {
-		return colorPrimario;
-	}
-	public void setColorPrimario(ColorRopa colorPrimario) {
+
+	public Prenda(ColorRopa colorPrimario, ColorRopa colorSecundario, Tela tela, String tipo, Categoria categoria) {
 		this.colorPrimario = colorPrimario;
-	}
-	public ColorRopa getColorSecundario() {
-		return colorSecundario;
-	}
-	public void setColorSecundario(ColorRopa colorSecundario) {
 		this.colorSecundario = colorSecundario;
-	}
-	public Tela getTela() {
-		return tela;
-	}
-	public void setTela(Tela tela) {
 		this.tela = tela;
-	}
-	public String getTipo() {
-		return tipo;
-	}
-	public void setTipo(String tipo) {
 		this.tipo = tipo;
-	}
-	public Categoria getCategoria() {
-		return categoria;
-	}
-	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
 	
-	
+	public Prenda(ColorRopa colorPrimario, Tela tela, String tipo, Categoria categoria) {
+		this.colorPrimario = colorPrimario;
+		this.tela = tela;
+		this.tipo = tipo;
+		this.categoria = categoria;
+	}
+	public ColorRopa getColorPrimario() {
+		return colorPrimario;
+	}
+
+	public ColorRopa getColorSecundario() {
+		return colorSecundario;
+	}
+
+	public Tela getTela() {
+		return tela;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
 
 }

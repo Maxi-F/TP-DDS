@@ -16,4 +16,6 @@ Con eso ya se vinculan git y el proyecto en Eclipse.
 
 Para usar git dentro de Eclipse:
 
-``` Properties -> Team -> ... ```
+``` 
+Boton derecho (en el proyecto) -> Team -> ... 
+```

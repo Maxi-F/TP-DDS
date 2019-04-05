@@ -8,36 +8,21 @@ public class PrendaTest {
 
 	private Prenda remeraRoja;
 	private Prenda camisetaBoca;
-	
+
 	@Before
-	public void init(){
-		
-		PrendaBuilder constructorRemeraRoja = new PrendaBuilder();
-		PrendaBuilder constructorCamisetaBoca= new PrendaBuilder();
-		
-		remeraRoja = constructorRemeraRoja
-				.setTipo("remera")
-				.setCategoria(Categoria.SUPERIOR)
-				.setColorPrimario(ColorRopa.ROJO)
-				.setTela(Tela.ALGODON)
-				.crear();
-		
-		camisetaBoca = constructorCamisetaBoca
-				.setTipo("camiseta")
-				.setCategoria(Categoria.SUPERIOR)
-				.setColorPrimario(ColorRopa.AZUL)
-				.setColorSecundario(ColorRopa.AMARILLO)
-				.setTela(Tela.ALGODON)
-				.crear();
-		
+	public void init() {
+
+		remeraRoja = new Prenda(ColorRopa.ROJO, Tela.ALGODON, "remera", Categoria.SUPERIOR);
+
+		camisetaBoca = new Prenda(ColorRopa.AZUL, ColorRopa.AMARILLO, Tela.NYLON, "camiseta", Categoria.SUPERIOR);
+
 	}
-	
-	
+
 	@Test
 	public void remeraRojaEsRoja() {
 		Assert.assertEquals(ColorRopa.ROJO, remeraRoja.getColorPrimario());
 	}
-	
+
 	@Test
 	public void camisetaBocaEsBoca() {
 		Assert.assertEquals(ColorRopa.AZUL, camisetaBoca.getColorPrimario());
